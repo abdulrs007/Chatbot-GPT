@@ -14,7 +14,7 @@ class ChatbotWindow(QMainWindow):
 
         # Add chat area widget
         self.chat_area = QTextEdit(self)
-        self.chat_area.setGeometry(10, 10, 480, 320) # positioning of the chatarea
+        self.chat_area.setGeometry(10, 10, 480, 320)  # Positioning of the chat area
         self.chat_area.setReadOnly(True)  # Making chat area read only
 
         # Add the input field widget
@@ -26,8 +26,6 @@ class ChatbotWindow(QMainWindow):
         self.button = QPushButton("Send", self)
         self.button.setGeometry(500, 340, 100, 40)
         self.button.clicked.connect(self.send_message)
-
-
         self.show()
 
     def send_message(self):
@@ -43,8 +41,6 @@ class ChatbotWindow(QMainWindow):
         self.chat_area.append(f"<p style='color:#333333; background-color: #E9E9E9'>MY_AI: {response}</P>")
 
 
-
 app = QApplication(sys.argv)
 main_window = ChatbotWindow()
 sys.exit(app.exec())
-
